@@ -1,0 +1,98 @@
+.mord-head {
+    animation: head-pop 500ms ease;
+    transform-origin: center;
+    transform-box: fill-box;
+    /* transform: scale(0); */
+}
+
+.mord-ears {
+    animation: ear-pop 600ms ease-out;
+    transform-origin: bottom;
+    transform-box: fill-box;
+    animation-delay: 500ms;
+    animation-fill-mode: backwards;
+}
+
+.mord-eyes {
+    animation: vertical-slide 1s ease-out;
+    transform-origin: center;
+    transform-box: fill-box;
+    animation-delay: 500ms;
+    animation-fill-mode: backwards;
+}
+
+.mord-tears {
+    animation: vertical-slide 500ms linear calc(1s + 500ms) backwards;
+    transform-origin: top;
+    transform-box: fill-box;
+}
+
+.mord-moon {
+    animation: spin-in 750ms ease-in-out calc(1s + 500ms) backwards, fade-in 750ms calc(1s + 500ms) backwards;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+.mord-nums {
+    position: relative;
+    opacity: 0;
+    animation: text-fade 0.75s forwards;
+}
+
+@keyframes text-fade {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes head-pop{
+    0% {
+        transform: scale(0);
+    }
+    80% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@keyframes ear-pop {
+    0% {
+        transform: scaleY(0);
+    }
+    80% {
+        transform: scaleY(1.1);
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+@keyframes vertical-slide {
+    0% {
+        transform: scaleY(0);
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+@keyframes spin-in {
+    0% {
+        transform: rotate(-180deg);
+    }
+    80% {
+        transform: rotate(66deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

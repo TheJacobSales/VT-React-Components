@@ -1,0 +1,14 @@
+:root {
+    --light-white : #D0D1FC;
+    --light-purple : #B8B9F6;
+    --purple : #6B69A9;
+    --dark-purple : #8D8CF7;
+    --light-slate: #303343;
+    --dark-slate: #171822;
+    --off-black : #07060D;
+}
+
+body {
+    background-color: var(--dark-slate);
+    color: white;
+}
